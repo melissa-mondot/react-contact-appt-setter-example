@@ -6,13 +6,13 @@ export const AppointmentsPage = () => {
   appointment info
   */
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   /*
+  //   Add contact info and clear data  
+  //   */
    
-  };
+  // };
 
   return (
     <div>

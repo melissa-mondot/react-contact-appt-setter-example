@@ -6,13 +6,13 @@ export const ContactsPage = () => {
   contact info and duplicate check
   */
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    /*
-    Add contact info and clear data
-    if the contact name is not a duplicate
-    */
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   /*
+  //   Add contact info and clear data
+  //   if the contact name is not a duplicate
+  //   */
+  // };
 
   /*
   Using hooks, check for contact name in the 
