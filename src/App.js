@@ -22,9 +22,11 @@ function App() {
   contacts and appointments
   */
 
-  const addContact = (name, phone, email) => {
-    setContacts({ [name]: { name, phone, email }, ...contacts });
-    console.log(contacts);
+  const addContact = (newContact) => {
+    console.log(newContact);
+    console.log(contacts.length);
+    setContacts({ newContact, ...contacts });
+    console.log({contacts});
   };
 
   const addAppointment = (title, contact, date, time) => {
