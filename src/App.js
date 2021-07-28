@@ -26,7 +26,6 @@ function App() {
     let contact = { name, email, phone };
     await setContacts((state) => [contact, ...contacts]);
   };
-  console.log(contacts);
 
   const addAppointment = (title, contact, date, time) => {
     let appointment = { title, contact, date, time };
@@ -38,6 +37,8 @@ function App() {
       let names = contact.name;
       return names;
     });
+
+  // console.log(contactNames());
 
   return (
     <>

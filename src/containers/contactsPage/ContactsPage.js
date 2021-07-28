@@ -22,7 +22,9 @@ export const ContactsPage = ({ ...props }) => {
       : props.addContact(newName, newPhone, newEmail);
   };
 
-  console.log(props.contactNames());
+  // const contactTiles = () => {
+  //   ;
+  // };
 
   return (
     <div>
@@ -65,9 +67,15 @@ export const ContactsPage = ({ ...props }) => {
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList>
-          <Tile></Tile>
-        </TileList>
+        <TileList />
+        {props.contacts.map((contact) => (
+          <Tile
+            key={contact.name}
+            name={contact.name}
+            phone={contact.phone}
+            email={contact.email}
+          />
+        ))}
       </section>
     </div>
   );
