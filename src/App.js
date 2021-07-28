@@ -22,12 +22,11 @@ function App() {
   contacts and appointments
   */
 
-  const addContact = (newContact) => {
-    console.log(newContact);
-    console.log(contacts.length);
-    setContacts({ newContact, ...contacts });
-    console.log({contacts});
+  const addContact = async (name, phone, email) => {
+    let contact = { name, email, phone };
+    await setContacts((state) => [contact, ...contacts]);
   };
+  console.log(contacts);
 
   const addAppointment = (title, contact, date, time) => {
     let appointment = { title, contact, date, time };
