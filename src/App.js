@@ -29,7 +29,7 @@ function App() {
 
   const addAppointment = (title, contact, date, time) => {
     let appointment = { title, contact, date, time };
-    setAppointment({ appointment, ...appointments });
+    setAppointment((state) => [appointment, ...appointments]);
   };
 
   const contactNames = () =>
