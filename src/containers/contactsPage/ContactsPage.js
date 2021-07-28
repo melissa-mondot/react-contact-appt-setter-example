@@ -15,7 +15,14 @@ export const ContactsPage = ({ ...props }) => {
     setNewEmail("");
   };
 
-  const addContact = () => props.addContact(newName, newPhone, newEmail);
+  const addContact = () => {
+    let names = props.contactNames();
+    names.includes(newName)
+      ? alert("Contact name already exists.") // TODO: needs something more slick than an alert
+      : props.addContact(newName, newPhone, newEmail);
+  };
+
+  console.log(props.contactNames());
 
   return (
     <div>
