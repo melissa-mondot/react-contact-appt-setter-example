@@ -1,14 +1,10 @@
 import React from "react";
 
 export const Tile = (listItem) => {
-console.log(listItem['listItem'])
-let tileInfo = listItem['listItem']
-  return (
-    <div className="tile-container">
-      <p>Name: {tileInfo.name}</p>
-      <p>Phone: {tileInfo.phone}</p>
-      <p>Email: {tileInfo.email}</p>
-      <p>Next Appt: </p>
-    </div>
-  );
+  let tileInfo = listItem["listItem"];
+  console.log(Object.entries(tileInfo)); // map over entries results
+  return <div className="tile-container"></div>;
 };
+
+// for (const [key, value] of Object.entries(object1)) {
+//   console.log(`${key}: ${value}`);
