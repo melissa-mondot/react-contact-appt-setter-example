@@ -6,5 +6,4 @@ export const TileList = (list) => {
   return tileList.map((listItem, idx) => (
     <Tile key={idx} listItem={listItem} />
   ));
-  // return null
 };

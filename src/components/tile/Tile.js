@@ -1,10 +1,24 @@
 import React from "react";
 
 export const Tile = (listItem) => {
-  let tileInfo = listItem["listItem"];
-  console.log(Object.entries(tileInfo)); // map over entries results
-  return <div className="tile-container"></div>;
-};
+  let tileData = Object.entries(listItem["listItem"]);
+  let tileInfo = [];
 
-// for (const [key, value] of Object.entries(object1)) {
-//   console.log(`${key}: ${value}`);
+  for (const [key, value] of tileData) {
+    key === tileData[0][0]
+      ? tileInfo.push(
+          <p className="tile-title" key={key}>
+            {key}: {value}
+          </p>
+        )
+      : tileInfo.push(
+          <p className="tile" key={key}>
+            {key}: {value}
+          </p>
+        );
+  }
+
+  let generateTiles = tileInfo.map((item) => item);
+
+  return <div className="tile-container">{generateTiles}</div>;
+};
