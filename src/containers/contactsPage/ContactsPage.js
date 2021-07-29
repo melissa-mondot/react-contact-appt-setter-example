@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { TileList } from "../../components/tileList/TileList";
-import { Tile } from "../../components/tile/Tile";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 
 export const ContactsPage = ({ ...props }) => {
@@ -40,15 +39,7 @@ export const ContactsPage = ({ ...props }) => {
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList />
-        {props.contacts.map((contact) => (
-          <Tile
-            key={contact.name}
-            name={contact.name}
-            phone={contact.phone}
-            email={contact.email}
-          />
-        ))}
+        <TileList list={props.contacts} />
       </section>
     </div>
   );

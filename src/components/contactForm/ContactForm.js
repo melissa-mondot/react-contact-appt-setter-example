@@ -25,6 +25,7 @@ export const ContactForm = ({
         <label>
           Phone:
           <input
+            // TODO: regex for ph
             required
             type="tel"
             placeholder="555-555-5555"
