@@ -1,7 +1,6 @@
 import React from "react";
 
 export const AppointmentForm = ({
-  contacts,
   contactNames,
   title,
   setTitle,

@@ -38,7 +38,7 @@ function App() {
       return names;
     });
 
-  // console.log(contactNames());
+  console.log({ appointments });
 
   return (
     <>
@@ -66,6 +66,8 @@ function App() {
           <Route path={ROUTES.APPOINTMENTS}>
             {/* Add props to AppointmentsPage */}
             <AppointmentsPage
+              contacts={contacts}
+              contactNames={contactNames}
               appointments={appointments}
               addAppointment={addAppointment}
             />
